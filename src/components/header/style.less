@@ -1,0 +1,41 @@
+@import '~style/helpers';
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: @header-height;
+	padding: 0;
+	background-color: @header-background-color;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	z-index: 50;
+
+	h1 {
+		margin: 0;
+		padding: @header-padding;
+		font-size: 1.5rem;
+		line-height: @header-height;
+		font-weight: 400;
+		color: @header-title-color;
+	}
+
+	nav {
+		font-size: 100%;
+		display: flex;
+
+		a {
+			line-height: @header-height;
+			padding: @header-padding;
+			text-align: center;
+			background-color: @header-link-background-color-hover;
+			text-decoration: none;
+			color: @header-link-color;
+			will-change: background-color;
+
+			&:hover, &:active {
+				background-color: @header-link-color-hover;
+				color: #555;
+			}
+		}
+	}
+}
